@@ -9,6 +9,12 @@ class TestBinarySearch(unittest.TestCase):
         self.assertEqual(actual, 3)
 
 
+    def test_target_found_edge(self):
+        actual = binary_search(0, [0, 1, 2, 3, 4])
+
+        self.assertEqual(actual, 0)
+
+
     def test_target_not_found_low(self):
         actual = binary_search(-1, [0, 1, 2, 3, 4])
 
@@ -19,12 +25,6 @@ class TestBinarySearch(unittest.TestCase):
         actual = binary_search(6, [0, 1, 2, 3, 4])
 
         self.assertEqual(actual, -1)
-
-
-    def test_target_found_edge(self):
-        actual = binary_search(0, [0, 1, 2, 3, 4])
-
-        self.assertEqual(actual, 0)
 
 
 if __name__ == '__main__':
