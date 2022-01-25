@@ -1,3 +1,2 @@
-# interview-cake
+## Coding Practice Problems in Python
 
-https://www.interviewcake.com/
