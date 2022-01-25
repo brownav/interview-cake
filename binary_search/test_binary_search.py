@@ -27,5 +27,11 @@ class TestBinarySearch(unittest.TestCase):
         self.assertEqual(actual, -1)
 
 
+    def test_target_not_found_empty(self):
+        actual = binary_search(0, [])
+
+        self.assertEqual(actual, -1)
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
