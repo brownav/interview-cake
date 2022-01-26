@@ -73,7 +73,7 @@ def find_last(arr, target):
     return -1
 
 
-print(first_and_last_b([2,4,5,5,5,5,5,9,9], 5))
+print(first_and_last_b([2,4,5,5,5,5,5,5,9,9], 5))
 
 
 

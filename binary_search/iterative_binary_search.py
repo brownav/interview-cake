@@ -1,7 +1,7 @@
 ### Iterative Binary Search ###
 
-# A binary search algorithm finds an item in a sorted list in O(lg(n))O(lg(n)) time.
-# A brute force search would walk through the whole list, taking O(n)O(n) time in the worst case.
+# A binary search algorithm finds an item in a sorted list in O(log n) time.
+# A brute force search would walk through the whole list, taking O(n) time in the worst case.
 
 # Let's say we have a sorted list of numbers. To find a number with a binary search, we:
 
