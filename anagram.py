@@ -1,6 +1,7 @@
 # Given two strings s1 and s2, check if they're anagrams. Two strings are anagrams if they're made of the same characters with the same frequencies, just in a different order. 
 
-# Example: s1 = "danger", s2 = "garden" = True
+# Input: s1 = "danger", s2 = "garden"
+# Output: True
 
 # Notes/Brainstorm:
 # 1. traverse one string,for each char check if char is in second string (this seems slow/bad and won't account for char frequency)
@@ -14,7 +15,7 @@ def is_anagram_a(str1, str2):
     if len(str1) != len(str2):
         return False
 
-    return sorted(str1) == sorted(str2)
+    return sorted(str1.lower()) == sorted(str2.lower())
 
 
 # time: O(n)
@@ -41,9 +42,3 @@ def is_anagram_b(str1, str2):
             return False
 
     return True
-
-
-
-
-
-
