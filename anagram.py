@@ -10,7 +10,7 @@
 # 4. use extra storage to keep track of char appearance, traverse both strings and store, then analyze storage/map to determine
 
 # time: O(n log n) -> sorted() uses Timsort
-# space: O(n)
+# space: O(1)
 def is_anagram_a(str1, str2):
     if len(str1) != len(str2):
         return False
