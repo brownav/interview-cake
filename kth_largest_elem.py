@@ -28,7 +28,7 @@ def k_largest_elem_b(arr, k):
     return max_num
 
 
-# smh .. way easier implementation than "k_largest_elem_b" lol
+# smh .. way easier implementation than "k_largest_elem_b"
 def k_largest_elem_c(arr, k):
     for i in range(k-1)
         arr.remove(max(arr))
