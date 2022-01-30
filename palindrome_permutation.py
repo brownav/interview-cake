@@ -7,6 +7,7 @@
 # Brainstorm:
 # for even len, you just need even num of each letter
 # for odd len, every char needs even num except for one
+# use dictionary to track totals
 
 def palindrome_permutation(word):
     chars = {}
