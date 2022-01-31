@@ -1,4 +1,5 @@
-# Remove Dups: Write code to remove duplicates from an unsorted linked list
+# Problem no.1: Remove duplicates from an unsorted linked list
+# Problem no.2: Find the kth to last element of a singly linked list
 class Node:
     def __init__(self, data=None):
         self.data = data
@@ -9,7 +10,8 @@ class LinkedList:
     def __init__(self, head=None):
         self.head = head
 
-    def add_node(self, node):
+
+    def append_node(self, node):
         if self.head is None:
             self.head = node
             return self.head
@@ -20,6 +22,17 @@ class LinkedList:
         current.next = node
         return self.head
 
+
+    def prepend_node(self, node):
+        if self.head is None:
+            self.head = node
+            return self.head
+
+        node.next = self.head
+        self.head = node
+        return self.head
+
+    # problem no. 1 solution
     def remove_dups(self):
         current = self.head
         node_values = set()
@@ -32,15 +45,26 @@ class LinkedList:
                 current = current.next
         return self.head
 
+    # problem no. 2 solution
+    def kth_from_last(self, k):
+        nodes = []
+        current = self.head
+
+        while current is not None:
+            nodes.append(current.data)
+            current = current.next
+
+        key = len(nodes) - k
+        return nodes[k]
+
     def print_ll(self):
         if self.head is None:
             print('empty list')
         else:
             current = self.head
-            print(current.data)
-            while current.next is not None:
-                current = current.next
+            while current is not None:
                 print(current.data)
+                current = current.next
 
 list1 = LinkedList(Node(0))
 nodea = Node(2)
@@ -49,12 +73,13 @@ nodec = Node(3)
 noded = Node(2)
 nodee = Node(6)
 nodef = Node(6)
-list1.add_node(nodea)
-list1.add_node(nodeb)
-list1.add_node(nodec)
-list1.add_node(noded)
-list1.add_node(nodee)
-list1.add_node(nodef)
+list1.append_node(nodea)
+list1.append_node(nodeb)
+list1.append_node(nodec)
+list1.append_node(noded)
+list1.append_node(nodee)
+list1.append_node(nodef)
 list1.print_ll()
+list1.kth_from_last(3)
 list1.remove_dups()
 list1.print_ll()
