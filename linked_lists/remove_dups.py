@@ -1,5 +1,7 @@
 # Problem no.1: Remove duplicates from an unsorted linked list
 # Problem no.2: Find the kth to last element of a singly linked list
+# Problem no.3: Reverse linked list
+
 class Node:
     def __init__(self, data=None):
         self.data = data
@@ -32,6 +34,7 @@ class LinkedList:
         self.head = node
         return self.head
 
+
     # problem no. 1 solution
     def remove_dups(self):
         current = self.head
@@ -45,6 +48,7 @@ class LinkedList:
                 current = current.next
         return self.head
 
+
     # problem no. 2 solution
     def kth_from_last(self, k):
         nodes = []
@@ -57,6 +61,19 @@ class LinkedList:
         key = len(nodes) - k
         return nodes[k]
 
+
+    # problem no. 3 solution
+    def reverse(self):
+        prev = None
+        current = self.head
+        while current is not None:
+            next = current.next
+            current.next = prev
+            prev = current
+            current = next
+        self.head = prev
+
+
     def print_ll(self):
         if self.head is None:
             print('empty list')
@@ -66,7 +83,7 @@ class LinkedList:
                 print(current.data)
                 current = current.next
 
-list1 = LinkedList(Node(0))
+list1 = LinkedList()
 nodea = Node(2)
 nodeb = Node(5)
 nodec = Node(3)
@@ -81,5 +98,7 @@ list1.append_node(nodee)
 list1.append_node(nodef)
 list1.print_ll()
 list1.kth_from_last(3)
-list1.remove_dups()
+# list1.remove_dups()
+# list1.print_ll()
+list1.reverse()
 list1.print_ll()
