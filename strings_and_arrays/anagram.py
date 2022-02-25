@@ -42,3 +42,22 @@ def is_anagram_b(str1, str2):
             return False
 
     return True
+
+
+def checkPermutation(s1, s2):
+    if len(s1) != len(s2):
+        return False
+
+    count = {}
+    for i in s1:
+        count[i] = count.get(i, 1) + 1
+    for i in s2:
+        if i in count:
+            count[i] -= 1
+            if count[i] == 0:
+                del count[i]
+        else:
+            return False
+    return len(count) == 0
+
+print(checkPermutation("tacocat", "tacocat"))
