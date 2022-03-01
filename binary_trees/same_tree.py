@@ -12,16 +12,16 @@ class TreeNode:
 
 class Solution:
     def is_same_tree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-      if not p and not q:
-        return True
+        if not p and not q:
+            return True
 
-      if not p or not q:
-        return False
+        if not p or not q:
+            return False
 
-      if p.val == q.val:
+        if p.val != q.val:
+            return False
+
         return self.is_same_tree(p.right, q.right) and self.is_same_tree(p.left, q.left)
-
-      return False
 
 # Driver code
 p = TreeNode(1, TreeNode(2), TreeNode(3))
