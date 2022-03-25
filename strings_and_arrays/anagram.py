@@ -1,4 +1,4 @@
-# Given two strings s1 and s2, check if they're anagrams. Two strings are anagrams if they're made of the same characters with the same frequencies, just in a different order. 
+# Given two strings s1 and s2, check if they're anagrams. Two strings are anagrams if they're made of the same characters with the same frequencies, just in a different order.
 
 # Input: s1 = "danger", s2 = "garden"
 # Output: True
@@ -59,5 +59,6 @@ def checkPermutation(s1, s2):
         else:
             return False
     return len(count) == 0
+
 
 print(checkPermutation("tacocat", "tacocat"))

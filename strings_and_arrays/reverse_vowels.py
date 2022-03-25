@@ -1,10 +1,10 @@
-# Reverse vowels in each word of a sentence 
+# Reverse vowels in each word of a sentence
 # input: baked brie rules
 # output: bekad brei relus
 
 
 # pointers
-class SolutionOne():
+class SolutionOne:
     def reverse_sentence_vowels(self, sentence: str) -> str:
         arr = sentence.split()
         words = []
@@ -35,9 +35,8 @@ class SolutionOne():
         return ("").join(word)
 
 
-
 # stack
-class SolutionTwo():
+class SolutionTwo:
     def reverse_sentence_vowels(self, sentence: str) -> str:
         arr = sentence.split()
         words = []
@@ -64,7 +63,5 @@ class SolutionTwo():
         return ("").join(word)
 
 
-
 print(SolutionOne().reverse_sentence_vowels("baked brie rules"))
 print(SolutionTwo().reverse_sentence_vowels("baked brie rules"))
-

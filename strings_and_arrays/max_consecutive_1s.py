@@ -27,5 +27,6 @@ def max_consecutive_ones(nums: List) -> List:
 
     return max_so_far
 
-print(max_consecutive_ones([1,1,0,1,1,1,1,1,1,0,1]))
+
+print(max_consecutive_ones([1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1]))
 print(max_consecutive_ones([]))

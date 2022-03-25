@@ -6,13 +6,14 @@
 
 # No "shorting"—you need to buy before you can sell. Also, you can't buy and sell in the same time step—at least 1 minute has to pass.
 
+
 def get_max_profit(stock_prices):
     if len(stock_prices) < 2:
-        raise ValueError('Getting a profit requires at least 2 prices')
+        raise ValueError("Getting a profit requires at least 2 prices")
 
     # We'll greedily update min_price and max_profit, so we initialize
     # them to the first price and the first possible profit
-    min_price  = stock_prices[0]
+    min_price = stock_prices[0]
     max_profit = stock_prices[1] - stock_prices[0]
 
     # Start at the second (index 1) time
@@ -30,7 +31,6 @@ def get_max_profit(stock_prices):
 
         # Update min_price so it's always
         # the lowest price we've seen so far
-        min_price  = min(min_price, current_price)
+        min_price = min(min_price, current_price)
 
     return max_profit
-

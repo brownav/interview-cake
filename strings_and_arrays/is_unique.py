@@ -16,13 +16,12 @@ def is_unique(word):
     return True
 
 
-
 # time: O(n log n)
 # space: O(1)
 def is_unique(word):
     sorted_word = sorted(word)
     for i in range(len(sorted_word)):
-        if sorted_word[i] == sorted_word[i+1]:
+        if sorted_word[i] == sorted_word[i + 1]:
             return False
     return True
 

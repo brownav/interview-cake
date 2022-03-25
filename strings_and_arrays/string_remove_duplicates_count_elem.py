@@ -8,10 +8,11 @@
 # create dict/hashmap where key is word, value is count
 # iterate over string and keep count, return new string where value equals 1
 
+
 def remove_dupes(string):
     word_count = {}
 
-    for char in string: 
+    for char in string:
         if char in word_count:
             word_count[char] += 1
         else:
@@ -20,11 +21,12 @@ def remove_dupes(string):
     no_dupes = ""
 
     for char in word_count:
-        print(f'char {char} appears {word_count[char]} times')
+        print(f"char {char} appears {word_count[char]} times")
         if word_count[char] == 1:
             no_dupes += char
 
     return no_dupes
+
 
 print(remove_dupes("jamesrussellbennet"))
 print(remove_dupes("alexandriavictoriabrown"))

@@ -11,7 +11,7 @@ from typing import List
 # time: O(n)
 # space: O(n)
 def two_sum(nums: List[int], target: int) -> List[int]:
-    dict = {} # val : index
+    dict = {}  # val : index
 
     for i in range(len(nums)):
         diff = target - nums[i]

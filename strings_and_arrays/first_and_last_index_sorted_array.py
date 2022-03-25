@@ -28,6 +28,7 @@ def first_and_last_a(arr, target):
     else:
         return [-1, -1]
 
+
 # ------------------------------------------ #
 
 # time = O(log n)
@@ -39,31 +40,32 @@ def first_and_last_b(arr, target):
     first = find_first(arr, target)
     last = find_last(arr[first:], target)
 
-    return [first, first+last]
+    return [first, first + last]
 
 
 def find_first(arr, target):
     start = 0
-    end = len(arr)-1
+    end = len(arr) - 1
 
     while start <= end:
         mid = (start + end) // 2
-        if arr[mid] == target and arr[mid-1] < target:
+        if arr[mid] == target and arr[mid - 1] < target:
             return mid
         elif arr[mid] < target:
             start = mid + 1
-        else: 
+        else:
             end = mid - 1
 
     return -1
 
+
 def find_last(arr, target):
     start = 0
-    end = len(arr)-1
+    end = len(arr) - 1
 
     while start <= end:
         mid = (start + end) // 2
-        if arr[mid] == target and arr[mid+1] > target:
+        if arr[mid] == target and arr[mid + 1] > target:
             return mid
         elif arr[mid] > target:
             end = mid - 1
@@ -73,7 +75,4 @@ def find_last(arr, target):
     return -1
 
 
-print(first_and_last_b([2,4,5,5,5,5,5,5,9,9], 5))
-
-
-
+print(first_and_last_b([2, 4, 5, 5, 5, 5, 5, 5, 9, 9], 5))

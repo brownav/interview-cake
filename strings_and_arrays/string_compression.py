@@ -2,6 +2,7 @@
 # Input: aabcccccaaa
 # Output: a2b1c5a3
 
+
 def string_compression(string):
     result = ""
     count = 1

@@ -20,7 +20,7 @@ def k_largest_elem_b(arr, k):
     while k > 0:
         i = 0
         max_num = arr[0]
-        while i < len(arr)-1:
+        while i < len(arr) - 1:
             max_num = max(arr[i], max_num)
             i += 1
         arr.remove(max_num)
@@ -30,9 +30,9 @@ def k_largest_elem_b(arr, k):
 
 # smh .. way easier implementation than "k_largest_elem_b"
 def k_largest_elem_c(arr, k):
-    for i in range(k-1)
+    for i in range(k - 1):
         arr.remove(max(arr))
     return max(arr)
 
-print(k_largest_elem_b([4,2,9,7,5,6,7,1,3], 4))
 
+print(k_largest_elem_b([4, 2, 9, 7, 5, 6, 7, 1, 3], 4))

@@ -1,4 +1,4 @@
-# Palindrome Permutation: Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters. 
+# Palindrome Permutation: Given a string, write a function to check if it is a permutation of a palindrome. A palindrome is a word or phrase that is the same forwards and backwards. A permutation is a rearrangement of letters.
 # Input: Tact Coa
 # Output: True (permutations: "taco cat", "atco cta", etc.)
 
@@ -8,6 +8,7 @@
 # for even len, you just need even num of each letter
 # for odd len, every char needs even num except for one
 # use dictionary to track totals
+
 
 def palindrome_permutation(word):
     chars = {}
