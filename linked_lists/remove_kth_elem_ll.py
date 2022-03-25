@@ -1,4 +1,4 @@
-'''
+"""
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
 https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
@@ -7,16 +7,19 @@ Output: [1,2,3,5]
 
 Input: head = [1,2], n = 1
 Output: [1]
-'''
+"""
+
 
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
+
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
-        if not head: return None
+        if not head:
+            return None
 
         # two pointer solution
         fast = slow = head

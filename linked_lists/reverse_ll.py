@@ -1,21 +1,23 @@
-'''
+"""
 Reverse a singly linked list
 
 Input: 1->2->3->4->5
 Output: 5->4->3->2->1
-'''
+"""
 
-class ListNode():
+
+class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
-    
-class Solution():
+
+
+class Solution:
     def reverse_list(self, head: ListNode) -> ListNode:
         curr, prev = head, None
 
         while curr:
-            tmp  = curr.next
+            tmp = curr.next
             curr.next = prev
             prev = curr
             curr = tmp
@@ -27,6 +29,7 @@ class Solution():
         while curr:
             print(curr.val)
             curr = curr.next
+
 
 # Driver code
 sol = Solution()

@@ -10,6 +10,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def is_same_tree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
         if not p and not q:
@@ -22,6 +23,7 @@ class Solution:
             return False
 
         return self.is_same_tree(p.right, q.right) and self.is_same_tree(p.left, q.left)
+
 
 # Driver code
 p = TreeNode(1, TreeNode(2), TreeNode(3))

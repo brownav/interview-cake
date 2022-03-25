@@ -1,4 +1,4 @@
-'''
+"""
 # Merge two sorted singly-linked lists into third new list
 
 You are given the heads of two sorted linked lists list1 and list2.
@@ -11,7 +11,7 @@ Constraints:
 * The number of nodes in both lists is in the range [0, 50].
 * -100 <= Node.val <= 100
 * Both list1 and list2 are sorted in non-decreasing order.
-''' 
+"""
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -47,5 +47,7 @@ class Solution:
 
 # Driver Code
 solution = Solution()
-head = solution.mergeTwoLists(ListNode(1, ListNode(2, ListNode(4))), ListNode(1, ListNode(3, ListNode(4))))
+head = solution.mergeTwoLists(
+    ListNode(1, ListNode(2, ListNode(4))), ListNode(1, ListNode(3, ListNode(4)))
+)
 solution.print_ll(head)

@@ -1,6 +1,6 @@
 from typing import Optional
 
-'''
+"""
 Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
 
 Input: head = [1,1,2]
@@ -8,12 +8,14 @@ Output: [1,2]
 
 Input: head = [1,1,2,3,3]
 Output: [1,2,3]
-'''
+"""
+
 
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
 
 class Solution:
     def delete_duplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
@@ -36,6 +38,7 @@ class Solution:
         while curr:
             print(curr.val)
             curr = curr.next
+
 
 # Driver code
 head = ListNode(1, ListNode(1, ListNode(2)))
